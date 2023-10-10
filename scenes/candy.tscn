@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1f0cih0x7rjw"]
+
+[ext_resource type="Texture2D" uid="uid://bapkphblhnjh8" path="res://sprites/circle.png" id="1_kxnxn"]
+[ext_resource type="Script" path="res://scripts/candy.gd" id="1_ptsmt"]
+
+[node name="Candy" type="Node2D"]
+script = ExtResource("1_ptsmt")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+light_mask = 512
+visibility_layer = 512
+z_index = 2
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("1_kxnxn")

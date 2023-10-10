@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpenqh1iay7ar"]
+
+[ext_resource type="Texture2D" uid="uid://be520uqmjvvax" path="res://sprites/rounded_rect.png" id="1_hainw"]
+[ext_resource type="Script" path="res://scripts/tile.gd" id="1_hwn7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpnpf"]
+size = Vector2(54, 54)
+
+[node name="Tile" type="Node2D"]
+script = ExtResource("1_hwn7e")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.341176, 0.341176, 0.341176, 1)
+light_mask = 16
+visibility_layer = 16
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("1_hainw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_jpnpf")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
