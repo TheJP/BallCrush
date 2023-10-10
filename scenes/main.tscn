@@ -8,7 +8,7 @@ script = ExtResource("1_4krws")
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 881.0
+offset_left = 813.0
 offset_top = 31.0
 offset_right = 1113.0
 offset_bottom = 614.0
@@ -23,3 +23,9 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 45
 text = "Moves: 0"
+
+[node name="Crushes" type="Label" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Crushes: 0"

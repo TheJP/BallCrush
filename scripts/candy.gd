@@ -14,6 +14,7 @@ const COLOURS = [
 
 var index: Vector2i
 var colour = 0
+var marked_for_remove = false
 
 func _ready():
 	$Sprite.modulate = COLOURS[colour]
